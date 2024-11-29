@@ -13,6 +13,12 @@
 - Содержит скрипт для тестирования производительности сервера.
 - Реализовано система хранения данных
 
+### Эндпоинты
+- `GET /notes/`: Получение всех заметок
+- `GET /notes/{id}`: Получение заметки по ID
+- `POST /notes/`: Создание новой заметки
+- `PUT /tasks/{id}`: Обновление заметки
+- `DELETE /tasks/{id}`: Удаление заметки
 
 ### Ограничения данных
 - `notes`: Строка до 120 символов
@@ -46,7 +52,7 @@ pip install -r requirements.txt
 ## Тестовый запуск performance-теста
 ### Важно: Перед тестированием убедитесь, что сервис запущен в Docker
 ```bash
-python performance_test.py --url http://localhost:8000 --total 100 --ratio 0.7
+python3 testNotesREST.py --url http://localhost:8000 --total 100 --ratio 0.7
 ```
 
 ## Параметры запуска
